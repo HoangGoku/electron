@@ -4,6 +4,7 @@ import icons from './assets/icons.svg'
 function App() {
   return (
     <div className="container">
+      <iframe src='http://127.0.0.1:5678'/>
       <Versions></Versions>
 
       <svg className="hero-logo" viewBox="0 0 900 300">
