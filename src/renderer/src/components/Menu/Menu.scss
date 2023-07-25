@@ -1,0 +1,212 @@
+$main-color: #1c458a;
+
+.Menu_wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 15% auto;
+  height: 8.2vh;
+  align-items: center;
+  text-align: center;
+  background: $main-color;
+  // border-top: 2px solid;
+  // border-image-slice: 1;
+  // border-image-source: linear-gradient(#f6e493 100%, #ab7b33 100%);
+  .menu-img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+    border-top: 1px solid #c48421;
+
+    img {
+      width: 100%;
+      height: 100%;
+      z-index: -999;
+      object-fit: cover;
+    }
+  }
+
+  .menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 9999;
+
+    img {
+    }
+  }
+
+  .menu-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+    .menu-item {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // position: relative;
+      list-style: none;
+      .menu-link {
+        text-decoration: none;
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .menu-text {
+          font-family: "Reem Kufi";
+          font-style: normal;
+          font-size: 16px;
+          line-height: 35px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: 700;
+        }
+
+        &:hover .menu-text {
+          font-weight: 700;
+        }
+      }
+
+      .line {
+        height: 100%;
+        position: absolute;
+        width: 1px;
+        background-image: linear-gradient(180deg, #f6e493 0%, #ab7b33 100%);
+        height: 50%;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .menu-border {
+        z-index: 1;
+        border-left: 1px solid #c48421;
+        height: 100%;
+      }
+    }
+  }
+  .menu-item:hover,
+  .menu-item.active {
+    background: linear-gradient(275.06deg, #daa046 2.86%, #c48421 86.92%);
+    // border-top-left-radius: 16px;
+  }
+
+  .menu-text-active {
+    font-family: "Reem Kufi";
+    font-style: normal;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-link {
+    // margin-bottom: 20px !important;
+  }
+  .menu-text {
+    display: none;
+  }
+  .menu-text-active {
+    margin-top: 0px !important;
+    font-size: 16px !important;
+    line-height: 15px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Menu_wrapper {
+    grid-template-columns: 2fr;
+    .menu-img-box {
+      img {
+      }
+    }
+
+    .menu-logo {
+      display: none;
+      img {
+        display: none;
+      }
+    }
+
+    .menu-list {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      height: 100%;
+      .menu-item {
+        text-align: center;
+        height: 100%;
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // position: relative;
+        list-style: none;
+        .menu-link {
+          text-decoration: none;
+          list-style-type: none;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .menu-text {
+            display: none;
+          }
+
+          &:hover .menu-text {
+          }
+        }
+
+        .line {
+          height: 100%;
+          position: absolute;
+          width: 1px;
+          background-image: linear-gradient(180deg, #f6e493 0%, #ab7b33 100%);
+          height: 50%;
+          right: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .menu-border {
+          z-index: 1;
+          border-left: 1px solid #c48421;
+          height: 100%;
+        }
+      }
+    }
+    .menu-item:hover,
+    .menu-item.active {
+      background: linear-gradient(275.06deg, #daa046 2.86%, #c48421 86.92%);
+      // border-top-left-radius: 16px;
+    }
+
+    .menu-text-active {
+      margin-top: 0px;
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .Menu_wrapper {
+    height: 65px;
+  }
+}

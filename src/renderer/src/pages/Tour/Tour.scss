@@ -1,0 +1,93 @@
+$main-color: #1C458A;
+
+.Tour_wrapper {
+  height: 92vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 0;
+
+  .tour-mode {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+    z-index: 2;
+
+    .tour-mode_btn {
+      height: 40px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+      font-family: 'Reem Kufi';
+      font-style: normal;
+      padding: 0 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px 0px;
+      color: $main-color;
+      text-transform: uppercase;
+
+      .btn-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+      } 
+    }
+
+    :not(.btn-content > img, .btn-content > span ):hover,
+    .active {
+      cursor: pointer;
+      background: linear-gradient(275.06deg, #daa046 2.86%, #c48421 86.92%);
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: white;
+    }
+  }
+
+  .gallery_logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .Tour_wrapper {
+    .tour-mode {
+      top: 82%;
+      .tour-mode_btn {
+        padding: 0 10px;
+
+        .btn-content {
+          font-size: 12px;
+        } 
+      }
+
+      :not(.btn-content > img, .btn-content > span ):hover,
+      .active {
+        font-size: 12px;
+      }
+    }
+
+    .gallery_logo {
+      display: flex;
+      // width: 100%;
+      // height: 100%;
+      position: fixed;
+      top: 2px;
+      left: 2px;
+      z-index: 999;
+    }
+  }
+}
